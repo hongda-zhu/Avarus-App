@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Avarus</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/80c46885ed.js"></script> 
+    <link rel="shortcut icon" href="https://i.redd.it/9o58donfgh331.png" type="image/png">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <input id="show-menu" name="modal" type="checkbox">
+        <label class="header-hamburger hamburger" for="show-menu"><span class="hamburger__icon"></span></label>
+        <p class="logo">Avarus</p>
+        <button class="button">Logout</button>
+        <nav class="header-nav nav">
+            <ul class="nav-menu menu">
+                <li class="menu-item">Luka</li>
+                <li class="menu-item">Budget</li>
+                <li class="menu-item">Transactions</li>
+                <li class="menu-item">Sellout</li>
+                <li class="menu-item">Favorite</li>
+                <li class="menu-item">Profile</li>
+                <li class="menu-item">
+                    <label class="hamburger-close" for="show-menu">Close</label>
+                </li>
+            </ul>
+        </nav>
+    </header> 
+
+    <section class="land hidden">
+        <div class="container-landing">
+            <div class="form-landing">
+
+                <div class="wrap-landing">
+
+                        <h1 class="wrap-landing__title">Avarus</h1>
+                
+                        <div class="wrap-landing__btnContainer btnContainer">
+                            <button class="btnContainer__btn">Login</button>
+                            <button class="btnContainer__btn">Register</button>
+                        </div>
+
+                        <p class="wrap-landing__copyright">@copyright by Adrían Zhu</p>
+                </div> 
+
+            </div>
+        </div>
+    </section>
+
+    <section class="log hidden">
+            <div class="container-login">
+                <div class="form-login">
+    
+                    <form type="submit" class="wrap-login">
+    
+                            <h1 class="wrap-login__title">LOGIN</h1>
+
+                            <div class="wrap-login__input" data-validate="email is required">
+                                <input class="wrap-login__input-container" type="email" name="email" placeholder="Email">
+                                <span class="wrap-login__input-symbol">
+                                    <i class="far fa-envelope"></i>
+                                </span>
+                            </div>
+
+                            <div class="wrap-login__input" data-validate="password is required">
+                                <input class="wrap-login__input-container" type="password" name="password" placeholder="Password">
+                                <span class="wrap-login__input-symbol">
+                                    <i class="fas fa-unlock-alt"></i>
+                                </span>
+                            </div>
+                    
+                            <div class="wrap-login__btnContainer btnContainer">
+                                <button class="btnContainer__btn">Login</button>
+                            </div>
+
+                            <div class="wrap-login__textContainer">
+                                <a class="wrap-login__textContainer-a" href ="#">
+                                    Go back
+                                </a>
+
+                                <a class="wrap-login__textContainer-a" href="#">
+                                    Sign up now							
+                                </a> 
+                            </div>
+                                
+                            <p class="wrap-login__copyright">@copyright by Adrían Zhu</p>
+
+                    </form>     
+                </div>
+            </div>
+    </section>
+
+    <section class="reg hidden">
+            <div class="container-register">
+                <div class="form-register">
+    
+                    <form type="submit" class="wrap-register">
+    
+                            <h1 class="wrap-register__title">Register</h1>
+
+                            <div class="wrap-register__input" data-validate="name is required">
+                                <input class="wrap-login__input-container" type="text" name="name" placeholder="Name">
+                                <span class="wrap-login__input-symbol">
+                                    <i class="fas fa-sort-alpha-down"></i>
+                                </span>
+                            </div>
+
+                            <div class="wrap-register__input" data-validate="surname is required">
+                                <input class="wrap-login__input-container" type="text" name="surname" placeholder="Surname">
+                                <span class="wrap-login__input-symbol">
+                                    <i class="fas fa-sort-alpha-up-alt"></i>
+                                </span>
+                            </div>
+
+                            <div class="wrap-register__input" data-validate="email is required">
+                                <input class="wrap-login__input-container" type="email" name="email" placeholder="Email">
+                                <span class="wrap-login__input-symbol">
+                                    <i class="far fa-envelope"></i>
+                                </span>
+                            </div>
+
+                            <div class="wrap-register__input" data-validate="password is required">
+                                <input class="wrap-login__input-container" type="password" name="password" placeholder="Password">
+                                <span class="wrap-login__input-symbol">
+                                    <i class="fas fa-unlock-alt"></i>
+                                </span>
+                            </div>
+                    
+                            <div class="wrap-register__btnContainer btnContainer">
+                                <button class="btnContainer__btn">Register</button>
+                            </div>
+
+                            <div class="wrap-register__textContainer">
+                                <a class="wrap-register__textContainer-a" href ="#">
+                                    Go back?
+                                </a>
+                            </div>
+                                
+                            <p class="wrap-register__copyright">@copyright by Adrían Zhu</p>
+
+                    </form>     
+                </div>
+            </div>
+    </section>
+
+    <main class="main hidden">
+        <span class="main-span">Choose the stocks you'd like to give</span>
+        <form type="submit" class="main-search">
+            <input class="main-search__text" name="query" placeholder="search" class="query">
+            <div class="main-search__btn"><i class="fas fa-search"></i></div>
+        </form>
+        <nav class="main-nav">
+            <ul class="main-nav__category category">
+
+                <li class="category-company company">
+                    <button class="company-button button">
+                        <p class="button-name">Treding</p> <p class="button-signal"> <i class="fas fa-arrow-right"></i> </p>  
+                    </button>
+                    <ul class="button-list"></ul>
+                </li>
+
+                <li class="category-company company">
+                    <button class="company-button button">
+                        <p class="button-name">Most Active</p> <p class="button-signal"> <i class="fas fa-arrow-right"></i> </p> 
+                    </button>
+                    <ul class="button-list"></ul>
+                </li>
+
+                <li class="category-company company">
+                    <button class="company-button button">
+                        <p class="button-name">Top Gainers</p> <p class="button-signal"> <i class="fas fa-arrow-right"></i> </p>  
+                    </button>
+                    <ul class="button-list"></ul>
+                </li>
+
+                <li class="category-company company">
+                    <button class="company-button button">
+                        <p class="button-name">Top Losers</p> <p class="button-signal"> <i class="fas fa-arrow-right"></i> </p>
+                    </button>
+                    <ul class="button-list"></ul>
+                </li>
+
+                <li class="category-company company">
+                    <button class="company-button button">
+                        <p class="button-name">Tech</p> <p class="button-signal"> <i class="fas fa-arrow-right"></i> </p>  
+                    </button>
+                    <ul class="button-list"></ul>
+                </li>
+                
+                <li class="category-company company">
+                        <button class="company-button button">
+                            <p class="button-name">Restaurant</p> <p class="button-signal"> <i class="fas fa-arrow-right"></i> </p>
+                        </button>
+                    <ul class="button-list"></ul>
+                </li>
+
+                <li class="category-company company">
+                        <button class="company-button button">
+                            <p class="button-name">Banking</p> <p class="button-signal"> <i class="fas fa-arrow-right"></i> </p>
+                        </button>
+                    <ul class="button-list"></ul>
+                </li>
+
+                <li class="category-company company">
+                    <button class="company-button button">
+                        <p class="button-name">Sports</p> <p class="button-signal"> <i class="fas fa-arrow-right"></i> </p>
+                    </button>
+                    <ul class="button-list"></ul>
+                </li>
+
+                <li class="category-company company">
+                    <button class="company-button button">
+                        <p class="button-name">Gaming</p> <p class="button-signal"> <i class="fas fa-arrow-right"></i> </p>
+                    </button>
+                    <ul class="button-list"></ul>
+                </li>
+
+                <li class="category-company company">
+                    <button class="company-button button">
+                        <p class="button-name">Fashion</p> <p class="button-signal"> <i class="fas fa-arrow-right"></i> </p>
+                    </button>
+                    <ul class="button-list"></ul>
+                </li>
+
+            </ul>
+        </nav>
+    </main>
+
+    <!-- Product -->
+    <section class="main">
+            <span class="main-span">Choose the stocks you'd like to give</span>
+            <form type="submit" class="main-search">
+                <input class="main-search__text" name="query" placeholder="search" class="query">
+                <div class="main-search__btn"><i class="fas fa-search"></i></div>
+            </form>
+            <nav class="main-nav">
+                <ul class="main-nav__category category">
+    
+                    <li class="category-company company">
+                        <button class="company-button button">
+                            <p class="button-name">Treding</p> <p class="button-signal"> <i class="fas fa-arrow-right"></i> </p>  
+                        </button>
+                        <ul class="button-list list">
+                            <li class="list-stock stock">
+                                <a class="stock-profile profile">
+                                    <p class="profile-title">Amazon</p>
+                                    <img src="https://dummyimage.com/125x175/000/fff" class="profile-img">
+                                </a>
+                            </li>
+                            <li class="list-stock stock">
+                                <a class="stock-profile profile">
+                                    <p class="profile-title">Skylab</p>
+                                    <img src="https://dummyimage.com/125x175/000/fff" class="profile-img">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+    </section>
+
+    <section class="detail hidden">
+        <div class="detail-container container">
+
+            <div class="container-description description">
+                <p class="description-title">Skylab</p>
+                <img src="https://dummyimage.com/200x250/000/fff" class="description-image">
+                <p class="description-currentValue">55$</p>
+                <p class="description-percentage__red"><i class="fas fa-arrow-down"></i> 3.06 (5.59%)</p>
+                <!-- <p class="description-percentage__green"><i class="fas fa-arrow-up"></i> 3.06 (5.59%)</p> -->
+            </div>
+
+            <nav class="container-navegator navegator">
+                <ul class="navegator-list list">
+                    <li class="list-item item">
+                        <button class="item-button">Buy</button>
+                    </li>
+                    <li class="list-item item">
+                        <button class="item-button">Charts</button>
+                    </li>
+                    <li class="list-item item">
+                        <button class="item-button">Stats</button>
+                    </li>
+                    <li class="list-item item">
+                        <button class="item-button">About</button>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- <div class="container-buy buy">
+                <span class="buy-text">How much would you like to buy ?</span>
+                <div class="buy-prices prices">
+                    <ul class="prices-list list">
+                        <li class="list-price price">
+                            <button class="price-btn">
+                                $25
+                            </button>
+                        </li>
+                        <li class="list-price price">
+                            <button class="price-btn">
+                                $50
+                            </button>
+                        </li>
+                        <li class="list-price price">
+                            <button class="price-btn">
+                                $100
+                            </button>
+                        </li>
+                        <li class="list-price price">
+                            <button class="price-btn">
+                                $200
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div type="submit" class="buy-search search">
+                    <form class="search-formula formula">
+                        <input class="formula-container" name="query" placeholder="How much" class="query">
+
+                        <button class="formula-btn">Pick stock</button>
+                    </form>
+                    <p class="search-warning">Enter value between $1 - $200</p>
+                </div>
+            </div> -->
+
+            <!-- <div class="container-charts charts">
+
+                <ul class="charts-list list">
+                    <li class="list-item item">
+                        <button class="item-btn">
+                            DAY
+                        </button>
+                    </li>
+                    <li class="list-item item">
+                        <button class="item-btn">
+                            WEEK
+                        </button>
+                    </li>
+                    <li class="list-item item">
+                        <button class="item-btn">
+                            MONTH
+                        </button>
+                    </li>
+                    <li class="list-item item">
+                        <button class="item-btn">
+                            MAX
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="charts-image image">
+                    <img class="image-chart" src="https://dummyimage.com/200x250/000/fff">
+                </div>
+
+                <div class="charts-btn btn">
+                    <button class="btn-goBack">BUY IT</button>
+                </div>
+            </div> -->
+
+            <!-- <div class="container-stats stats">
+                <table class="stats-tabla tabla">
+                    <tr>
+                        <th>Open:</th>
+                        <td>143</td>
+                    </tr>
+                    <tr>
+                        <th>Higher:</th>
+                        <td>148.2</td>
+                    </tr>
+                    <tr>
+                        <th>Lower:</th>
+                        <td>142.1</td>
+                    </tr>
+                    <tr>
+                        <th>Average:</th>
+                        <td>146.6</td>
+                    </tr>
+                </table>
+            </div>  -->
+
+            <!-- <div class="container-about about">
+
+                <div class="about-name name">
+                    <p class="name-enterprise">Skylab</p>
+                </div>
+                
+                <div class="about-description">
+                    Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies window expect. Supply as so period it enough income he genius. Themselves acceptance bed sympathize get dissimilar way admiration son. Design for are edward regret met lovers. This are calm case roof and. 
+                </div>
+                <div class="about-box box">
+                    <div class="box-dependencies dependencies">
+                        <img src="https://dummyimage.com/125x175/000/fff" class="dependencies-image">
+                        <img src="https://dummyimage.com/125x175/000/fff" class="dependencies-image">
+                    </div>
+                </div>
+            </div>
+
+        </div> -->
+    </section>
+
+    <section class="hamburger hidden">
+        <div class="hamburger-user user">
+            <p class="user-name">name</p>
+        </div>
+        <!-- <div class="hamburger-cash cash">
+            <table class="cash-tabla tabla">
+                <tr>
+                    <th>beforeCash</th>
+                    <th>AfterCash</th>
+                    <th>unitary price</th>
+                    <th>Amount Sold</th>
+                    <th>Total Gain</th>
+                    <th>Transaction Date</th>
+                    <th>Company</th>
+                </tr>
+                <tr>
+                    <td>760</td>
+                    <td>800</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>40</td>
+                    <td>05/07/2019</td>
+                    <td>Skylab</td>
+                <tr>
+                    <td>760</td>
+                    <td>800</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>40</td>
+                    <td>05/07/2019</td>
+                    <td>Skylab</td>
+                </tr>
+            </table>
+        </div> -->
+
+        <!-- <div class="hamburger-favorite favorite"> 
+            <table class="favorite-tabla tabla">
+
+            <tr>
+                <th>Price Evolution</th>
+                <th>Actual price</th>
+                <th>Actual Date</th>
+                <th>Company</th>
+                <th>Favorite</th>
+            </tr>
+            <tr>
+                <td>2.4%</td>
+                <td>760</td>
+                <td>14/07/2019</td>
+                <td>Skylab</td>
+                <td><i class="fas fa-heart"></i></td>
+            </tr>
+
+            </table> 
+        </div> -->
+
+        <!-- <div class="hamburger-history history">
+            <table class="history-tabla tabla">
+
+                <tr>
+                    <th>Purchase price</th>
+                    <th>Sold price</th>
+                    <th>Volumne sold</th>
+                    <th>Value</th>
+                    <th>Sold date</th>
+                    <th>company</th>
+                </tr>
+                <tr>
+                    <td>768</td>
+                    <td>772</td>
+                    <td>30</td>
+                    <td>23160</td>
+                    <td>14/07/2019</td>
+                    <td>Skylab</td>
+                </tr>
+
+            </table>
+        </div> -->
+
+        <!-- <div class="hamburger-history history hidden">
+            <table class="history-tabla tabla">
+
+                <tr>
+                    <th>Purchase price</th>
+                    <th>Sold price</th>
+                    <th>Volumne sold</th>
+                    <th>Value</th>
+                    <th>Sold date</th>
+                    <th>company</th>
+                </tr>
+                <tr>
+                    <td>768</td>
+                    <td>772</td>
+                    <td>30</td>
+                    <td>23160</td>
+                    <td>14/07/2019</td>
+                    <td>Skylab</td>
+                </tr>
+
+            </table>
+        </div> -->
+
+       
+            
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer__others others">
+            <div class="others__copyright">copyright of Adrían Zhu ©2019 </div>
+            <ul class="others__social-media social-media">
+                <li class="social-media__media-icon">
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                </li>
+                <li class="social-media__media-icon">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li class="social-media__media-icon">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="social-media__media-icon">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+.boxes 
+  display: grid
+  grid-template-areas: "div1 div2" "div3 div3"
+  width: 100%
+
+.buyin,
+.sellout
+    grid-area: div1
+    min-height: 5rem
+    overflow-y: scroll
+    padding: 0.25rem
+
+    &-title
+        margin: 1.5rem
+        font-size: 1.5rem
+        font-style: normal
+        text-align: center
+
+    .information
+        display: flex
+
+        .detail
+            
+            &-property
+                border: 1px solid black
+                padding: 5px
+                text-align: center
+                
+    .btn
+        display: flex
+        justify-content: center
+        margin: 1rem
+
+        &-click
+            font-size: 1rem
+            border-bottom: 0.5px solid black
+
+
+.sellout
+    grid-area: div2
+    min-height: 5rem
+    overflow-y: scroll
+    
+    &-title
+        margin: 1.5rem
+        font-size: 1.5rem
+        font-style: normal
+        text-align: center
+
+    .information
+        display: flex
+
+        .detail
+            width: 100%
+
+            &-property
+                border: 1px solid black
+                padding: 5px
+                text-align: center
+                width: 100%
+            &-boxes
+                border: 1px solid black
+                padding: 5px 5px 13px 5px
+                text-align: center
+                width: 100%
+            &-block
+                border: 1px solid black
+                padding: 5px 5px 5px 5px
+                text-align: center
+                width: 100%
+
+
+.buttons
+    grid-area: div3
+
+    .navegator
+        margin: 3rem 0
+
+        .lists-sellRegister
+            display: flex
+            justify-content: center
+
+        .list
+            display: flex
+            justify-content: space-evenly
+            margin: 1rem
+
+            .item
+                border: 1px solid black
+                padding: 0.1rem 1rem 0.3rem 1rem
+
+                
+
+        &-btn
+            border: 1px black solid 
+            padding: 0.2rem
+            display: flex
+            justify-content: center
+            margin: 0 20%
+                

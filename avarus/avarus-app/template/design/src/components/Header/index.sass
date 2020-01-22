@@ -1,0 +1,85 @@
+.header
+    background-color: bisque
+    display: flex
+    position: relative
+    align-content: center
+    justify-content: space-between
+    padding: 1rem
+    font-size: 1.5rem
+
+.logo
+    width: 200px
+    display: flex
+    justify-content: center
+    padding-left: 1rem
+
+.button
+    background-color: transparent
+
+.hamburger__icon
+    background: #333
+    display: none
+    height: 2px
+    position: relative
+    width: 20px
+    top: 13px
+
+    &:before, &:after
+        background: #333
+        content: ''
+        display: block
+        height: 2px
+        position: absolute
+        width: 20px
+
+    &:before
+        top: 5px
+
+    &:after
+        top: -5px
+
+.hamburger-close
+    cursor: pointer
+
+.nav
+    width: 100%
+
+.menu
+    display: flex
+    justify-content: space-around
+    list-style: none
+    
+#show-menu, #close-menu
+    display: none
+
+@media (max-width: 480px)
+    body
+        background: white
+
+    .hamburger
+        cursor: pointer
+        padding-top: .4rem
+
+    .hamburger__icon
+        display: block
+
+    .nav
+        display: none
+
+    #show-menu:checked ~ .nav
+        display: block
+        position: absolute
+        top: 68px
+        left: 0
+        width: 200px
+        background: aliceblue
+
+    .menu
+      display: flex
+      flex-direction: column
+      height: calc(100vh - 60px)
+      justify-content: flex-start
+      list-style: none
+
+      .menu-item
+        padding: 1rem

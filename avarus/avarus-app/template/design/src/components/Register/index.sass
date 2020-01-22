@@ -1,0 +1,148 @@
+.reg
+    width: 100%
+    margin: 0 auto
+
+.container-register
+    width: 100%
+    min-height: 100vh
+    display: flex
+    flex-wrap: center
+    justify-content: center
+    align-items: center
+    position: relative
+    z-index: 1
+
+    background: #2F3C7E
+    background: -webkit-linear-gradient(top, #2F3C7E, #fbeaeb, red)
+    background: -moz-linear-gradient(top, #2F3C7E, #fbeaeb, red)
+    animation: gradientBG 15s ease infinite
+
+    &::before
+        content: ""
+        display: block
+        position: absolute
+        z-index: -1
+        width: 100%
+        height: 100%
+        background-image: url('../public/img-01.png')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        opacity: .6 
+
+.form-register
+
+    margin: 15px 15px
+    padding: 5px 15px 10px 15px
+    background-color: white
+    overflow: hidden
+    opacity: .8
+
+.wrap-register
+
+    width: 100%
+    
+    &__title
+        display: flex
+        justify-content: center
+        color: #333333
+
+        text-align: center  
+        line-height: 5
+        text-transform: full-width
+        font-size: 32px
+        font-family: 'Alfa Slab One', cursive
+
+    &__input
+        position: relative
+        margin-bottom: 16px
+        width: 100%
+        z-index: 1
+
+        &-container
+            font-size: 18px
+            line-height: 1.2
+            color: #616161
+            display: block
+            width: 100%
+            background-color: whitesmoke
+            height: 62px
+            border-radius: 3px
+            padding: 0 30px 0 65px
+
+            &:focus
+                border: 1px solid black
+        
+        &-symbol
+            font-size: 24px
+            color: #999999
+            display: flex
+            align-items: center
+            position: absolute
+            bottom:0
+            left: 0
+            height: 100%
+            padding-bottom: 5px
+            padding-left: 23px
+            transition: all .5s
+            
+    .btnContainer
+        
+        margin: 2rem 0
+        display: flex
+        justify-content: center
+        flex-direction: column
+        width: 100%
+
+        &__btn
+            margin: 1rem 0
+            padding: .5rem 0
+
+            font-size: 16px
+            line-height: 2
+            color: white
+            background-color: #616161
+            text-transform: uppercase
+
+            -webkit-transition: all .5s
+            -o-transition: all .5s
+            -moz-transition: all .5s
+            transition: all .5s
+            
+            cursor: pointer
+            letter-spacing: .2rem
+
+            &:hover
+                background-color: #2F3C7E
+
+    &__copyright
+
+        margin-top: 4rem
+        display: flex
+        justify-content: center
+        color: #757575
+        letter-spacing: .15rem
+    
+    &__textContainer
+
+        display: flex
+        justify-content: center
+        margin-top: 1rem   
+
+        &-a
+            color: black
+            border-bottom: 1px solid black
+
+            &:hover
+                color: #2F3C7E
+    
+@keyframes gradientBG
+
+    0% 
+        background-position: 0% 50%
+    
+    50% 
+        background-position: 100% 50%
+    
+    100%
+        background-position: 0% 50% 

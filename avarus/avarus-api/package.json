@@ -1,0 +1,34 @@
+{
+  "name": "avarus-api",
+  "version": "1.0.0",
+  "description": "final project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "debug": "node inspect .",
+    "test": "npx mocha logic/**/*.spec.js",
+    "test-debug": "npx mocha inspect logic/**/*.spec.js",
+    "test:coverage": "npx nyc --reporter=html --reporter=text mocha logic/**/*.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "avarus-data": "file:../avarus-data",
+    "avarus-util": "file:../avarus-util",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "nyc": "^14.1.1",
+    "sass": "^1.24.0",
+    "busboy": "^0.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "node-fetch": "^2.6.0"
+  }
+}
