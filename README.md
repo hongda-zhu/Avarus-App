@@ -1,1 +1,1 @@
-# InvestPillar
+# Avarus-App
