@@ -19,8 +19,8 @@ router.post('/', jsonBodyParser, tokenVerifier, (req, res) => {
             .catch(error => {
                 const { message } = error
 
-                if (error instanceof ConflictError)
-                    return res.status(409).json({ message })
+                if (error instanceof NotFoundError)
+                    return res.status(404).json({ message })
 
                 res.status(500).json({ message })
             })

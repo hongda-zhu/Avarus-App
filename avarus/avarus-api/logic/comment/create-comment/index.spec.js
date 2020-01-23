@@ -3,7 +3,7 @@ const { env: { TEST_DB_URL} } = process
 const { expect } = require('chai')
 const createComment = require('.')
 const { random, floor } = Math
-const { errors: { NotFoundError, ConflictError, ContentError } } = require('avarus-util')
+const { errors: { NotFoundError, ContentError } } = require('avarus-util')
 const { ObjectId, database, models: { User, Company, Stock, Transaction, Comment } } = require('avarus-data')
 const bcrypt = require('bcryptjs')
 

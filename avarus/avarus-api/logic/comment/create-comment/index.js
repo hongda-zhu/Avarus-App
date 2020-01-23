@@ -28,7 +28,7 @@ module.exports = function (userId, transactionId, body) {
 
 
     return (async () => {
-        debugger
+        
         const user = await User.findById( userId )
         
         if (!user) throw new NotFoundError(`user with id ${userId} does not exists`)
