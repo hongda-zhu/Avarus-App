@@ -69,22 +69,6 @@ describe('logic - create-price', () => {
           }
       })
 
-      it('should not create the price of stock if companyId is incorrect', async () => {
-
-        const companyID = '5de407687f38731d659c98e5'
-
-        try {
-
-          await createPrice(companyID, price)
-          throw Error('should not reach this point')
-
-          } catch (error) {
-              expect(error).to.exist
-              expect(error).to.be.an.instanceOf(NotFoundError)
-              expect(error.message).to.equal(`company with companyId ${companyID} not found`)
-          }
-      })
-
       it('should fail on incorrect inputs', ()=> {
           
             expect(() => createPrice(1)).to.throw(TypeError, '1 is not a string')

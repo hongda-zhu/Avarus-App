@@ -1,5 +1,5 @@
 import call from '../../utils/call'
-const { validate, errors: { ConflictError } } = require('avarus-util')
+const { validate, errors: { ConflictError, NotFoundError } } = require('avarus-util')
 const API_URL = process.env.REACT_APP_API_URL
 
 export default function (userId, companyId, stockId, buyInTransactionId, operation, quantity) { 
@@ -48,6 +48,8 @@ export default function (userId, companyId, stockId, buyInTransactionId, operati
             body: JSON.stringify({companyId, stockId, buyInTransactionId, operation, quantity})
         })
         if (res.status === 201) return 
+
+        if (res.status === 404) throw new NotFoundError(JSON.parse(res.body).message)
 
         if (res.status === 409) throw new ConflictError(JSON.parse(res.body).message)
 

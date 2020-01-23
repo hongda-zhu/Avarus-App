@@ -182,6 +182,13 @@ router.post('/:id/sellout', jsonBodyParser, (req, res) => {
                 if (error instanceof CredentialsError)
                     return res.status(401).json({ message })
 
+                
+                if (error instanceof NotFoundError)
+                    return res.status(404).json({ message })
+
+                if (error instanceof ConflictError)
+                    return res.status(409).json({ message })
+
                 res.status(500).json({ message })
             })
     } catch ({ message }) {
