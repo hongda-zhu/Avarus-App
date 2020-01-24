@@ -90,8 +90,6 @@ describe('logic - update comment', () => {
 
             const wrongCommentId = ObjectId().toString()
 
-            debugger
-
             try {
                 await editComment(token, commentId = wrongCommentId, newBody)
 

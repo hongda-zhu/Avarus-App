@@ -52,7 +52,7 @@ router.post('/auth', jsonBodyParser, (req, res) => {
 })
 
 router.get('/', tokenVerifier, (req, res) => {
-
+    
     const { id } = req
     try {
 
@@ -77,7 +77,6 @@ router.get('/', tokenVerifier, (req, res) => {
 
 router.patch('/', jsonBodyParser, tokenVerifier, (req, res) => {
 
-    debugger
     const {id , body: { email, password, verifiedPassword} } = req
     
     try {
@@ -85,6 +84,9 @@ router.patch('/', jsonBodyParser, tokenVerifier, (req, res) => {
             .then(() => res.status(200).end())
             .catch(error => {
                 const { message } = error
+
+                if (error instanceof CredentialsError)
+                    return res.status(401).json({ message })
 
                 if (error instanceof NotFoundError)
                     return res.status(404).json({ message })
@@ -309,7 +311,7 @@ router.patch('/favs/:companyId', jsonBodyParser, tokenVerifier, (req, res) => {
 })
 
 router.post('/profile', tokenVerifier, (req, res) => {
-    debugger
+    
     const {  id  } = req
     const busboy = new Busboy({ headers: req.headers })
     busboy.on('file', async(fieldname, file, filename, encoding, mimetype) => {

@@ -3,7 +3,7 @@ const { ObjectId, models: { Comment } } = require('avarus-data')
 
 /**
  *
- * retrieve-user
+ * edit comment
  * 
  * @param {commentId} ObjectId
  * @param {body} string
@@ -20,14 +20,12 @@ module.exports = function (commentId, newBody) {
     validate.string.notVoid('newBody', newBody)
 
     return (async () => {
-        debugger
+        
         const comment = await Comment.findById(commentId)
         if(!comment) throw new NotFoundError(`comment with id ${commentId} does not exists`)
         let update = {}
         update.body = newBody
         update.date = new Date
-
-        debugger
 
         await Comment.updateOne({_id: commentId}, {$set: update})
 

@@ -31,7 +31,7 @@ router.post('/', jsonBodyParser, tokenVerifier, (req, res) => {
 
 
 router.get('/:transactionId', jsonBodyParser, tokenVerifier, (req, res) => {
-    debugger
+    
     const {id:userId, params:{transactionId} } = req
 
     try { 
@@ -54,7 +54,7 @@ router.get('/:transactionId', jsonBodyParser, tokenVerifier, (req, res) => {
 })
 
 router.patch('/:commentId', tokenVerifier, jsonBodyParser, (req, res) => {
-    debugger
+    
     const {params:{commentId}, body: {newBody}} = req
 
     try {

@@ -4,7 +4,7 @@ const moment = require('moment')
 
 /**
  *
- * create comment
+ * retrieve comment
  * 
  * @param {userId} ObjectId
  * @param {transactionId} ObjectId

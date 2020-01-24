@@ -29,7 +29,7 @@ export default  function (token, commentId, newBody) {
     }
 
     return (async () => {
-        debugger
+        
         const res = await call(`${API_URL}/comments/${commentId}`, {
             method: 'PATCH',
             headers: {

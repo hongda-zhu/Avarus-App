@@ -1,6 +1,5 @@
 const { validate, errors: { NotFoundError, ContentError } } = require('avarus-util')
 const { ObjectId, models: { Company } } = require('avarus-data')
-const moment = require('moment')
 
 /**
  *

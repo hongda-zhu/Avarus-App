@@ -40,9 +40,9 @@ export default  function (token, email, password, verifiedPassword) {
         validate.string.notVoid('verifiedPassword', verifiedPassword)
 
     }
-
+    debugger
     return (async () => {
-        debugger
+        
         const res = await call(`${API_URL}/users`, {
             method: 'PATCH',
             headers: {
@@ -54,7 +54,7 @@ export default  function (token, email, password, verifiedPassword) {
 
         if (res.status === 200)  return
           
-        if (res.status === 400) throw new CredentialsError(JSON.parse(res.body).message)
+        if (res.status === 401) throw new CredentialsError(JSON.parse(res.body).message)
         
         if (res.status === 404) throw new NotFoundError(JSON.parse(res.body).message)
 

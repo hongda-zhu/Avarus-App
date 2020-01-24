@@ -1,4 +1,4 @@
-const { validate, errors: {NotFoundError, ContentError, ConflictError } } = require('avarus-util')
+const { validate, errors: {NotFoundError, ContentError, CredentialsError } } = require('avarus-util')
 const { ObjectId, models: { User } } = require('avarus-data')
 const bcrypt = require('bcryptjs')
 
@@ -17,7 +17,7 @@ const bcrypt = require('bcryptjs')
 
 
 module.exports = function(id, email, password, verifiedPassword) {
-  debugger
+  
   validate.string(id)
   validate.string.notVoid('id', id)
   if (!ObjectId.isValid(id)) throw new ContentError(`${id} is not a valid id`)
@@ -45,7 +45,7 @@ module.exports = function(id, email, password, verifiedPassword) {
 
     if (!user) throw new NotFoundError(`user with id ${id} not found`)
     
-    if((password || verifiedPassword) && (password !== verifiedPassword)) throw new ConflictError (`failed to modify password, passwords are not the same, please introduce correctly your password and it's verification`)
+    if((password || verifiedPassword) && (password !== verifiedPassword)) throw new CredentialsError(`failed to modify password, passwords are not the same, please introduce correctly your password and it's verification`)
 
     const update = {}
 
