@@ -19,6 +19,7 @@ module.exports = function (commentId) {
 
     return (async () => {
         
+        debugger
         const comment = await Comment.findById(commentId)
         if(!comment) throw new NotFoundError(`comment with id ${commentId} does not exists`)
 

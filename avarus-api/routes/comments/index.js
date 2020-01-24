@@ -82,9 +82,15 @@ router.delete('/:commentId', tokenVerifier, (req,res)=>{
         deleteComment(commentId)
         .then(() => res.status(204).end())
         .catch(error => {
-            if(error instanceof NotFoundError) return res.status(404).json(error.message)
-            if(error instanceof ConflictError) return res.status(409).json(error.message)
-            res.status(500).end()
+            const { message } = error
+
+            if(error instanceof NotFoundError)
+                return res.status(404).json({message})
+
+            if(error instanceof ConflictError)
+                return res.status(409).json({message})
+
+            res.status(500).json({ message })
         })
     }  catch (error) {
         const { message } = error

@@ -35,8 +35,6 @@ module.exports = function (userId, companyId, stockId, operation, quantity) {
 
     return (async () => { 
 
-        debugger
-
         if (operation !== 'buy-in') throw new ConflictError(`it should be buy-in operation`)
 
         const user  = await User.findById( userId )

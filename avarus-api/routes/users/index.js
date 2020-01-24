@@ -175,13 +175,11 @@ router.post('/:id/sellout', jsonBodyParser, (req, res) => {
     try {
         sellOut(userId, companyId, stockId, buyInTransactionId, operation, quantity)
         .then(() => res.status(201).end())
-        // .then(sellout => res.json({ sellout }))
             .catch(error => {
                 const { message } = error
 
                 if (error instanceof CredentialsError)
                     return res.status(401).json({ message })
-
                 
                 if (error instanceof NotFoundError)
                     return res.status(404).json({ message })

@@ -2,14 +2,14 @@ require('dotenv').config()
 const { env: { TEST_DB_URL } } = process
 const { expect } = require('chai')
 const { random } = Math
-const modufyUser = require('.')
+const editUser = require('.')
 const { errors: { NotFoundError, ContentError, ConflictError } } = require('avarus-util')
 const { database, models: { User } } = require('avarus-data')
 const bcrypt = require('bcryptjs')
 
 describe('logic - edit user', () => {
   before(() => database.connect(TEST_DB_URL))
-  let email, username, password, verifiedPassword, budget, id
+  let email, username, password, verifiedPassword, budget, id, transactions
   let newEmail, newPassword, newVerifiedPassword
 
   describe('when user is registed correctly', () => {
@@ -24,13 +24,15 @@ describe('logic - edit user', () => {
 
       const user = await User.create({  email, username, password: await bcrypt.hash(password, 10), verifiedPassword, budget, transactions})
       id = user.id
+
+      await user.save()
     })
 
     it('should succeed on modify email using correct values', async () => {
       newEmail = `email-${random()}@mail.com`
       newPassword = newVerifiedPassword = undefined
       
-      await modufyUser(id, newEmail, newPassword, newVerifiedPassword)
+      await editUser(id, newEmail, newPassword, newVerifiedPassword)
 
       const user = await User.findById(id)
     
@@ -49,7 +51,7 @@ describe('logic - edit user', () => {
       newEmail = undefined
       newPassword = newVerifiedPassword = `password-${random()}`
 
-      await modufyUser(id, newEmail, newPassword, newVerifiedPassword)
+      await editUser(id, newEmail, newPassword, newVerifiedPassword)
       const user = await User.findById(id)
 
       expect(user).to.exist
@@ -69,7 +71,7 @@ describe('logic - edit user', () => {
 
       try {
 
-        await modufyUser(id, newEmail, newPassword, newVerifiedPassword)
+        await editUser(id, newEmail, newPassword, newVerifiedPassword)
 
         throw Error(`should not reach this point`)
 
@@ -92,7 +94,7 @@ describe('logic - edit user', () => {
 
       try {
 
-        await modufyUser(id, newEmail, newPassword, newVerifiedPassword)
+        await editUser(id, newEmail, newPassword, newVerifiedPassword)
 
         throw Error(`should not reach this point`)
 
@@ -112,7 +114,7 @@ describe('logic - edit user', () => {
       let wrongId = '012345678901234567890123'
 
       try {
-        await modufyUser(wrongId)
+        await editUser(wrongId)
 
         throw Error('should not reach this point')
       } catch (error) {
@@ -126,7 +128,7 @@ describe('logic - edit user', () => {
       let invalidId = 'sadasdasdasdasdasdas'
 
       try {
-        await modufyUser(invalidId)
+        await editUser(invalidId)
 
         throw Error('should not reach this point')
       } catch (error) {
