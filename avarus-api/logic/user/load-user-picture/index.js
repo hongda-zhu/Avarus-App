@@ -9,12 +9,12 @@ module.exports = function (userId) {
 
     return (async () => {
 
-        let goTo = path.join(__dirname, `../../data/users/${userId}/profile.png`)
+        let goTo = path.join(__dirname, `../../../data/users/${userId}/profile.png`)
         try {
             if (fs.existsSync(goTo)) {
                 return fs.createReadStream(goTo)
             } else {
-                const defaultImage = path.join(__dirname, `../../data/nodata.png`)
+                const defaultImage = path.join(__dirname, `../../../data/nodata.png`)
                 return fs.createReadStream(defaultImage)
             }
         } catch (error) {

@@ -25,7 +25,7 @@ export default withRouter(function ({ name, budget, onLogout, picture, userId}) 
     </div>
 
     <input type="checkbox" className="menu-btn" id="menu-btn" />
-    <label for="menu-btn" className="menu-icon" >
+    <label htmlFor="menu-btn" className="menu-icon" >
         <span className="menu-icon__line"></span>
     </label>
 

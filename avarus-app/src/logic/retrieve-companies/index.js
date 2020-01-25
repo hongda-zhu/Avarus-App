@@ -27,7 +27,7 @@ export default  function (query, token) {
 
     return (async () => {  
 
-        const res = await call(`${API_URL}/companies/${query}`, {
+        const res = await call(`${API_URL}/companies/${query}`, { 
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`

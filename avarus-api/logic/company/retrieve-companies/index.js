@@ -27,6 +27,7 @@ module.exports = function (query, userId) {
 
     return (async () => {    
 
+        debugger
         
         const user = await User.findById(userId)
 
@@ -60,6 +61,8 @@ module.exports = function (query, userId) {
             await company.save()
         
         })
+
+        debugger
 
         return results
             
