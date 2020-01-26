@@ -6,7 +6,7 @@ Avarus is a mobile game that has a fictional stock market. When the user makes t
 
 ## Features
 
-Users is able to:
+User is able to:
 - login and register
 - search stocks and check a particular stock's detailç
 - buy or sell stocks
