@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 const moment = require('moment')
 
 
-export default withRouter(function ({ history, transaction, onClose }) {  
+export default withRouter(function ({ history, transaction }) {  
 
     const {amount, company, time} = transaction
 
@@ -27,9 +27,5 @@ export default withRouter(function ({ history, transaction, onClose }) {
         <h3 className="items__time">{exactTime}</h3>
         <p className="items__name">{name}</p>
         <p className="items__amount">{ajustedAmount}</p>
-        <div className="items__close" onClick={ event => {
-            event.preventDefault()
-           /*  onClose() */
-        }}>✖︎</div>
     </a>
 })
