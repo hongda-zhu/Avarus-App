@@ -1,6 +1,6 @@
 # Avarus
 
-Avarus is a mobile game that has a fictional stock market. When the user makes the account registration for the first time, this user will obtain a predetermined initial budget of the fictitious currency which he can use it to invest and earn profits by doing the operations of buying and selling of such assets.
+Avarus is a mobile app-game which has a fictional stock market. User makes the account registration for the first time, this user will obtain a predetermined initial budget of the fictitious currency which he can use it to invest and earn profits by doing the operations of buying and selling of such assets.
 
 ![head](https://media0.giphy.com/media/rM0wxzvwsv5g4/giphy.gif?cid=790b7611c5bc1b46948fd8d6dcea108f680b353f908a6175&rid=giphy.gif)
 
@@ -8,10 +8,11 @@ Avarus is a mobile game that has a fictional stock market. When the user makes t
 
 User is able to:
 - login and register
-- search stocks and check a particular stock's detailç
+- search stocks and check a particular stock's detail
 - buy or sell stocks
 - check transactions history and check budget variation
-- update personal profile and add favorite
+- add, update, delete comment about a transaction done
+- update personal profile (add user's profile picture) and add favorite company
 - logout
 
 
@@ -34,11 +35,3 @@ User is able to:
 
 ### ToDo
 
-- Favorite
-- Personal Profile
-- Update picture
-- Improvement of price algorithm
-- Comment 
-- Connections
-- form Equip
-- Tests
