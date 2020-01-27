@@ -1,37 +1,46 @@
 # Avarus
 
-Avarus is a mobile app-game which has a fictional stock market. User makes the account registration for the first time, this user will obtain a predetermined initial budget of the fictitious currency which he can use it to invest and earn profits by doing the operations of buying and selling of such assets.
+Avarus is a investment-game where you ,as a user, will have an initial budget to invest shares of ficitionary companies and gain profit. Once when you get into the game, you can retrieve company, see it's shares evolution, buy or sell it's shares to gain the profit, add favorite company into account, modify your personal profile and leave comments for each transaction that you have made.
 
 ![head](https://media0.giphy.com/media/rM0wxzvwsv5g4/giphy.gif?cid=790b7611c5bc1b46948fd8d6dcea108f680b353f908a6175&rid=giphy.gif)
 
 ## Features
 
-User is able to:
-- login and register
-- search stocks and check a particular stock's detail
-- buy or sell stocks
-- check transactions history and check budget variation
-- add, update, delete comment about a transaction done
-- update personal profile (add user's profile picture) and add favorite company
-- logout
+Anouymous user can: 
+- Register
+- Login
 
+Register user can:
+- Check/Update user's own account information such as change password or personal picture
+- Retrieve company by it's id or category
+- Add preferent company as favorite company
+- Check favorite company lists 
+- Check detail of each company including company's information, company daily share's variation
+- Buy/Sell share's of company 
+- Check detail of a buy-in transaction
+- Leave Comment for each transaction
 
 ## Functional Description
+
 ### Use cases
-![Use Cases](./images/USER&#32;CASES.png))
+![Use Cases](./avarus-doc/images/USER&#32;CASES.jpg)
+### Flow
+![Use Cases](./avarus-doc/images/USER&#32;FLOW.jpg)
 
 ## Technical Description
+
 ### Blocks
-![Blocks](./images/BLOCKS.jpeg)
+![Blocks](./avarus-doc/images/block.png)
 
 ### Components
-![Components](./images/components.png)
+![Components](./avarus-doc/images/components.png)
 
 ### Data Model
-![Data Model](../Avarus-App/avarus-doc/images/DATA&#32;MODEL.png)
+![Data Model](./avarus-doc/images/Data&#32;Model&#32;Avarus.jpg)
 
-### Code Coverage
-![Coverage](./images/Coverage.png)
+## Code Coverage
+### API
+![API test](./avarus-doc/images/API&#32;Test.png)
 
-### ToDo
-
+### APP
+![Coverage](./avarus-doc/images/App&#32;Test.png)s
