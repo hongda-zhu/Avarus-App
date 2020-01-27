@@ -20,7 +20,7 @@ module.exports = function () {
             if (!company) throw new NotFoundError(`company with companyId ${companyId} not found`)
 
             if (!company.stocks.length) {
-                const stock = new Stock({ price: 150, time: new Date('2020-01-22 00:00:00') })
+                const stock = new Stock({ price: 150, time: new Date('2020-01-27 00:00:00') })
 
                 company.stocks.push(stock)
             }

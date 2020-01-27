@@ -4,6 +4,44 @@ Avarus is a investment-game where you ,as a user, will have an initial budget to
 
 ![head](https://media0.giphy.com/media/rM0wxzvwsv5g4/giphy.gif?cid=790b7611c5bc1b46948fd8d6dcea108f680b353f908a6175&rid=giphy.gif)
 
+## Process
+
+** avarus-data **
+
+```
+npm i
+```
+
+** avarus-util **
+
+```
+npm i
+```
+
+```
+node utils/populate.js
+```
+
+** avarus-app **
+
+```
+npm i
+```
+
+```
+yarn start
+```
+
+** avarus-api **
+
+```
+npm i
+```
+
+```
+node .
+```
+
 ## Features
 
 Anouymous user can: 
@@ -18,7 +56,7 @@ Register user can:
 - Check detail of each company including company's information, company daily share's variation
 - Buy/Sell share's of company 
 - Check detail of a buy-in transaction
-- Leave Comment for each transaction
+- Leave/Update/Delete Comment for transactions
 
 ## Functional Description
 
@@ -43,4 +81,12 @@ Register user can:
 ![API test](./avarus-doc/images/API&#32;Test.png)
 
 ### APP
-![Coverage](./avarus-doc/images/App&#32;Test.png)s
+![Coverage](./avarus-doc/images/App&#32;Test.png)
+
+## Technologies
+
+HTML5, CSS3, SASS, Javascript, React.js, Node.js, Express, MongoDB & Mongoose
+
+## Credits
+
+Hongda(Adrían) Zhu
