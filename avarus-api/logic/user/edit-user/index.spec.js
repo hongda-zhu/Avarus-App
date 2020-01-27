@@ -3,7 +3,7 @@ const { env: { TEST_DB_URL } } = process
 const { expect } = require('chai')
 const { random } = Math
 const editUser = require('.')
-const { errors: { NotFoundError, ContentError, ConflictError } } = require('avarus-util')
+const { errors: { NotFoundError, ContentError, ConflictError, CredentialsError } } = require('avarus-util')
 const { database, models: { User } } = require('avarus-data')
 const bcrypt = require('bcryptjs')
 
@@ -103,7 +103,7 @@ describe('logic - edit user', () => {
         expect(error).to.exist
         expect(error.message).to.exist
         expect(typeof error.message).to.equal('string')
-        expect(error).to.be.an.instanceOf(ConflictError)
+        expect(error).to.be.an.instanceOf(CredentialsError)
         expect(error.message.length).to.be.greaterThan(0)
         expect(error.message).to.equal(`failed to modify password, passwords are not the same, please introduce correctly your password and it's verification`)
 
