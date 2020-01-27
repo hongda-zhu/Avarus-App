@@ -18,10 +18,6 @@ npm i
 npm i
 ```
 
-```
-node utils/populate.js
-```
-
 ** avarus-app **
 
 ```
@@ -40,6 +36,10 @@ npm i
 
 ```
 node .
+```
+
+```
+node utils/populate.js
 ```
 
 ## Features
