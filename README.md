@@ -33,13 +33,12 @@ yarn start
 ```
 npm i
 ```
+```
+node utils/populate.js
+```
 
 ```
 node .
-```
-
-```
-node utils/populate.js
 ```
 
 ## Features
