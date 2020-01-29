@@ -11,14 +11,17 @@ export default withRouter(function ({ history, company, token }) {
 
     function goToDetail() {
         const { id } = company;
+        debugger
         history.push(`/detail/${id}`);
+        debugger
     }
 
     return (
         <a
             className="profile"
             onClick={function (event) {
-                event.preventDefault();
+                event.preventDefault()
+                event.stopPropagation()
                 goToDetail();
             }}
         >

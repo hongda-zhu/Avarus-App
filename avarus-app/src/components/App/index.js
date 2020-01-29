@@ -155,7 +155,7 @@ export default withRouter(function ({ history }) {
 
       <Route path = '/login' render = {() => !token ? <Login onLogin={handleLogin} error={error} onClose={handleCloseError}/> : <Redirect to="/" /> } />  
 
-      <Route path = '/main' render = {() =>  <Main error={error} onClose={handleCloseError} token={token} /> } />
+      <Route path = '/main' render = {() =>  <Main error={error} onClose={handleCloseError} token={token} refreshAll={refreshAll} /> } />
 
       <Route path = '/detail/:id' render={({ match: { params: { id:companyId } } })  => token && id ? <> <Detail userId={id} companyId={companyId} onBuy={refreshAll}/> </>: <Redirect to="/" />  } />
 

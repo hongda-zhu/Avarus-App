@@ -10,6 +10,7 @@ module.exports = function (userId) {
     return (async () => {
 
         let goTo = path.join(__dirname, `../../../data/users/${userId}/profile.png`)
+        debugger
         try {
             if (fs.existsSync(goTo)) {
                 return fs.createReadStream(goTo)

@@ -5,7 +5,7 @@ import Feedback from '../Feedback'
 import Search from '../Search'
 import {retrieveCompanies} from '../../logic'
 
-function Main ({error, onClose, token }) { 
+function Main ({error, onClose, token, refreshAll }) { 
 
     const [companies, setCompanies] = useState([])
 
@@ -18,6 +18,7 @@ function Main ({error, onClose, token }) {
             try{
 
                 handleSearchAll(token)
+                refreshAll()
                 
 
             }catch(message){
