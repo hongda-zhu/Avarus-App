@@ -14,7 +14,7 @@ module.exports = function (userId) {
             if (fs.existsSync(goTo)) {
                 return fs.createReadStream(goTo)
             } else {
-                const defaultImage = path.join(__dirname, `../../../data/nodata.png`)
+                const defaultImage = path.join(__dirname, `../../../data/default/default-user.png`)
                 return fs.createReadStream(defaultImage)
             }
         } catch (error) {

@@ -37,7 +37,7 @@ export default withRouter(function ({ name, budget, onLogout, picture, userId}) 
             <label>your buying power is {budget}</label>
         </li>
         <li className="nav-link">
-            <label><img className="user-container_image" src={picture ? picture : "images/default/default-user.png"}/></label>
+            <label><img className="user-container_image" src={picture ? picture : "../../../public/default/default-user.png"}/></label>
         </li>
         <li className="nav-link">
             <label><Link to="/main">Main</Link></label>
