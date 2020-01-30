@@ -59,7 +59,7 @@ export default withRouter(function ({ history }) {
 
               imageUser && (imageUser = `${API_URL}/users/load/${id}?timestamp=${Date.now()}`)
 
-              debugger
+              
 
               setBudget(budget.toFixed(4))
               setId(id)
@@ -114,7 +114,7 @@ export default withRouter(function ({ history }) {
 
 
     try {
-        debugger 
+         
 
         const { token } = sessionStorage
       

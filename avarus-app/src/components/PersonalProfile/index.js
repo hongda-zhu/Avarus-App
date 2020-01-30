@@ -53,7 +53,7 @@ export default function ({ email, username, password, picture, onModifyUser, onB
                     verifiedPassword: { value: verifiedPassword },
                 } = event.target
 
-                debugger
+                
 
                 onModifyUser(email, password, verifiedPassword)
             }}>
@@ -126,7 +126,7 @@ export default function ({ email, username, password, picture, onModifyUser, onB
 //                     verifiedPassword: { value: verifiedPassword },
 //                 } = event.target
 
-//                 debugger
+//                 
 
 //                 onModifyUser(email, password, verifiedPassword)
 //             }}>

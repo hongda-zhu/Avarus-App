@@ -40,7 +40,7 @@ export default  function (token, email, password, verifiedPassword) {
         validate.string.notVoid('verifiedPassword', verifiedPassword)
 
     }
-    debugger
+    
     return (async () => {
         
         const res = await call(`${API_URL}/users`, {

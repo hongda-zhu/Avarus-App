@@ -19,7 +19,7 @@ const writeFileAsync = promisify(fs.writeFile)
 
 
 module.exports = function(id, file, filename) {
-    debugger
+    
     validate.string(id)
     validate.string.notVoid('id', id)
     if (!ObjectId.isValid(id)) throw new ContentError(`${id} is not a valid id`)

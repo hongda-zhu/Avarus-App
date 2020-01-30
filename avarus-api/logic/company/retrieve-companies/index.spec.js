@@ -121,7 +121,7 @@ describe('logic - retrieve company', () => {
         try {
             
             await retrieveCompanies(wrongQuery, userId)
-            debugger
+            
             throw Error('should not reach this point')
         } catch (error) {
             

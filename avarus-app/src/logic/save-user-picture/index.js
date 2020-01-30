@@ -11,7 +11,7 @@ const API_URL = process.env.REACT_APP_API_URL
 * @returns {Promise} - user.  
 */
 module.exports = function (token, image) {
-    debugger
+    
     validate.string(token)
     validate.string.notVoid('token', token)
     let fData = new FormData()

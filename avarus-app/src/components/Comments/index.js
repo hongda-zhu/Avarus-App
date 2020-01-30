@@ -45,7 +45,7 @@ function Comments({ transactionId }) {
 
     async function handleOnModifyComment(token, commentId, body) {
         try {
-            debugger
+            
             await editComment(token, commentId, body)
 
             await refreshComments(token, transactionId);

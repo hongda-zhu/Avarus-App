@@ -14,7 +14,7 @@ const API_URL = process.env.REACT_APP_API_URL
 
 export default  function (query, token) { 
 
-    debugger
+    
     if(query) {
             
         validate.string(query)

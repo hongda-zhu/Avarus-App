@@ -37,7 +37,7 @@ function Main ({error, onClose, token, refreshAll }) {
 
         try { 
 
-            debugger
+            
             const companies = await retrieveCompanies(undefined, token)
             
             setCompanies(companies)

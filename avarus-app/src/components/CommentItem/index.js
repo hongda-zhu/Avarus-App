@@ -8,7 +8,7 @@ export default withRouter(function ({ token, comment, onModifyComment, onDeleteC
 
     const newTime = moment(date).format("DD-MMM-YYYY HH:mm:ss")
     
-    debugger
+    
     return <section className="comments">
         <div className="comments__container container">
             <h3 className="container__title">Comment</h3>

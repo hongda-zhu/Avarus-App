@@ -21,7 +21,7 @@ export default  function (token, transactionId) {
     validate.string.notVoid('transactionId', transactionId)
 
     return (async () => {  
-        debugger
+        
         const res = await call(`${API_URL}/comments/${transactionId}`, {
             method: 'GET',
             headers: {

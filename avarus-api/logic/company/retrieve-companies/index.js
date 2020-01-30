@@ -27,7 +27,7 @@ module.exports = function (query, userId) {
 
     return (async () => {    
 
-        debugger
+        
         
         const user = await User.findById(userId)
 
@@ -62,7 +62,7 @@ module.exports = function (query, userId) {
         
         })
 
-        debugger
+        
 
         return results
             

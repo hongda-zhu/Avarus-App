@@ -119,7 +119,7 @@ fdescribe('logic - retrieve company', () => {
         try {
             
             await retrieveCompanies(wrongQuery, token)
-            debugger
+            
             throw Error('should not reach this point')
         } catch (error) {
             
