@@ -3,6 +3,15 @@ const { validate } = require('avarus-util')
 const fs = require('fs')
 const path = require('path')
 
+/**
+* Load the user profile image
+* 
+* @param {ObjectId} id of the user
+*
+* @returns {Promise} - data of image  
+*/
+
+
 module.exports = function (userId) {
     validate.string(userId)
     validate.string.notVoid('userId', userId)
